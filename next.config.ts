@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Disable writing trace file to avoid intermittent EPERM on Windows
+  outputFileTracing: false,
 };
 
 export default nextConfig;
