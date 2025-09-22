@@ -49,7 +49,7 @@ export default function LearnerReview() {
         </div>
 
         <p className="mt-10 text-center text-sm opacity-90 sm:mt-12">
-          Don't Just Read Reviews—Experience It Yourself
+          Don&apos;t Just Read Reviews—Experience It Yourself
         </p>
       </Container>
     </section>

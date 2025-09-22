@@ -5,7 +5,7 @@ export default function Section3() {
     <section className="relative w-full bg-white py-12 text-black sm:py-16">
       <Container>
         <h2 className="mb-10 text-center text-2xl font-semibold sm:mb-12 sm:text-3xl">
-          What You'll Gain by Attending
+          What You&apos;ll Gain by Attending
         </h2>
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">

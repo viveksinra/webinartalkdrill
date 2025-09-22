@@ -62,7 +62,7 @@ export default function TimerComponent() {
           </div>
 
           <p className="mb-10 text-sm text-white/95 sm:text-base">
-            Don't miss out on 4x salary and <span className="font-extrabold text-yellow-300">FREE</span> Bonus worth <span className="font-extrabold text-yellow-300">₹10,000</span>
+            Don&apos;t miss out on 4x salary and <span className="font-extrabold text-yellow-300">FREE</span> Bonus worth <span className="font-extrabold text-yellow-300">₹10,000</span>
           </p>
 
           <div className="mx-auto grid max-w-xl grid-cols-3 items-center gap-4 sm:max-w-2xl">
