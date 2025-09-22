@@ -78,20 +78,7 @@ export default function LearnerInfo() {
               className={`relative rounded-2xl ${s.bg} ${s.text} p-6 text-center shadow`}
             >
               {/* Overlapped avatars on the 3rd card for visual flair */}
-              {idx === 2 ? (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <div className="relative h-10 w-10 rounded-full bg-[#3b82f6] text-white ring-4 ring-white">
-                    <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-sm font-bold">
-                      K
-                    </span>
-                  </div>
-                  <div className="absolute -right-4 top-2 h-9 w-9 rounded-full bg-[#ef4444] text-white ring-4 ring-white">
-                    <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-xs font-bold">
-                      V
-                    </span>
-                  </div>
-                </div>
-              ) : null}
+         
 
               <div className="mt-2 text-xl font-extrabold sm:text-2xl">{s.value}</div>
               <div className="mt-2 text-xs sm:text-sm">
