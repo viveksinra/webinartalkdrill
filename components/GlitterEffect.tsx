@@ -16,7 +16,7 @@ type GlitterParticle = {
   color: string;
 };
 
-export default function GlitterEffect({ count = 120, showForMs = 2400 }: GlitterEffectProps) {
+export default function GlitterEffect({ count = 80, showForMs = 3000 }: GlitterEffectProps) {
   const [visible, setVisible] = useState(true);
   const [isMounted, setIsMounted] = useState(false);
 
@@ -34,12 +34,12 @@ export default function GlitterEffect({ count = 120, showForMs = 2400 }: Glitter
   }, [prefersReducedMotion, showForMs]);
 
   const particles = useMemo<GlitterParticle[]>(() => {
-    const colors = ["#FFD700", "#FFC107", "#FFECB3", "#FFF8E1", "#FFE082"];
+    const colors = ["#FFD700", "#FFC107", "#FFF59D", "#FFF8E1", "#FFE082", "#FDD835", "#FFEB3B"];
     return Array.from({ length: count }).map((_, index) => {
       const leftPercent = Math.random() * 100;
-      const sizePx = 3 + Math.random() * 5;
-      const delayMs = Math.floor(Math.random() * 600);
-      const durationMs = 1400 + Math.floor(Math.random() * 1400);
+      const sizePx = 2 + Math.random() * 4;
+      const delayMs = Math.floor(Math.random() * 1000);
+      const durationMs = 2000 + Math.floor(Math.random() * 2000);
       const color = colors[Math.floor(Math.random() * colors.length)];
       return { id: index, leftPercent, sizePx, delayMs, durationMs, color };
     });
@@ -63,9 +63,9 @@ export default function GlitterEffect({ count = 120, showForMs = 2400 }: Glitter
             className="td-glitter-particle"
             style={{
               width: p.sizePx,
-              height: p.sizePx * 0.6,
-              background: p.color,
-              animation: `td-glitter-twirl ${Math.max(900, Math.floor(p.durationMs * 0.85))}ms ${p.delayMs}ms ease-in-out infinite alternate`,
+              height: p.sizePx,
+              color: p.color,
+              animation: `td-glitter-twirl ${Math.max(1200, Math.floor(p.durationMs * 0.85))}ms ${p.delayMs}ms ease-in-out infinite`,
             }}
           />
         </div>
@@ -85,31 +85,45 @@ export default function GlitterEffect({ count = 120, showForMs = 2400 }: Glitter
           opacity: 0;
         }
         .td-glitter-particle {
-          border-radius: 2px;
-          filter: drop-shadow(0 0 2px rgba(255, 215, 0, 0.6));
+          border-radius: 50%;
+          filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.8)) 
+                  drop-shadow(0 0 6px rgba(255, 215, 0, 0.4));
+          background: radial-gradient(circle at 30% 30%, 
+            rgba(255, 255, 255, 0.8), 
+            currentColor 40%);
         }
         @keyframes td-glitter-fall {
           0% {
-            transform: translateY(-10%);
+            transform: translateY(-10%) scale(0);
             opacity: 0;
           }
-          10% {
+          15% {
+            transform: translateY(10%) scale(1);
+            opacity: 1;
+          }
+          85% {
             opacity: 1;
           }
           100% {
-            transform: translateY(110%);
+            transform: translateY(110%) scale(0.5);
             opacity: 0;
           }
         }
         @keyframes td-glitter-twirl {
           0% {
-            transform: translateX(0) rotate(0deg);
+            transform: translateX(0) rotate(0deg) scale(1);
+          }
+          25% {
+            transform: translateX(10px) rotate(90deg) scale(1.2);
           }
           50% {
-            transform: translateX(14px) rotate(180deg);
+            transform: translateX(0) rotate(180deg) scale(0.8);
+          }
+          75% {
+            transform: translateX(-10px) rotate(270deg) scale(1.1);
           }
           100% {
-            transform: translateX(-14px) rotate(360deg);
+            transform: translateX(0) rotate(360deg) scale(1);
           }
         }
       `}</style>
