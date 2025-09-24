@@ -12,20 +12,27 @@ const reviews: Review[] = [
     name: "Ravi Kumar",
     text:
       "Before TalkDrill, I struggled in client calls. After practicing daily, I finally cracked my dream MNC interview with confidence. Truly life‑changing!",
-    avatar: "/assets/illustrations/characters/character-present.webp",
+    avatar: "https://img.freepik.com/free-photo/successful-businessman_1098-18155.jpg",
   },
   {
     name: "Priya Sharma",
     text:
       "The webinar gave me practical tips, not theory. The free demo session and TalkDrill practice coins made it so easy to continue my learning journey.",
-    avatar: "/assets/illustrations/characters/character-study.webp",
+    avatar: "https://cdn.pixabay.com/photo/2024/02/12/17/23/ai-generated-8569065_1280.jpg",
   },
   {
     name: "Arjun Mehta",
     text:
       "In just 30 days, my fluency improved drastically. I now handle presentations and negotiations without fear. TalkDrill made me believe in myself again.",
-    avatar: "/assets/illustrations/characters/character-happy-jump.webp",
+    avatar: "https://cdn.pixabay.com/photo/2022/03/11/06/14/indian-man-7061278_640.jpg",
   },
+  {
+    name: "Sneha Patel",
+    text:
+      "The webinar helped me prepare for my promotion interview. The confidence hacks and workplace‑ready English templates made all the difference.",
+    avatar: "https://img.freepik.com/free-photo/indian-woman-posing-cute-stylish-outfit-camera-smiling_482257-122351.jpg?semt=ais_hybrid&w=740&q=80",
+  },
+
 ];
 
 export default function LearnerReview() {
