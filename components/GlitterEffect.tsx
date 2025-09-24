@@ -18,6 +18,7 @@ type GlitterParticle = {
 
 export default function GlitterEffect({ count = 120, showForMs = 2400 }: GlitterEffectProps) {
   const [visible, setVisible] = useState(true);
+  const [isMounted, setIsMounted] = useState(false);
 
   // Respect reduced motion preferences
   const prefersReducedMotion = useMemo(() => {
@@ -26,6 +27,7 @@ export default function GlitterEffect({ count = 120, showForMs = 2400 }: Glitter
   }, []);
 
   useEffect(() => {
+    setIsMounted(true);
     if (prefersReducedMotion) return;
     const timeout = window.setTimeout(() => setVisible(false), showForMs);
     return () => window.clearTimeout(timeout);
@@ -43,7 +45,8 @@ export default function GlitterEffect({ count = 120, showForMs = 2400 }: Glitter
     });
   }, [count]);
 
-  if (!visible || prefersReducedMotion) return null;
+  // Avoid hydration mismatch: render nothing on server, first render on client only
+  if (!isMounted || !visible || prefersReducedMotion) return null;
 
   return (
     <div className="td-glitter-container" aria-hidden>

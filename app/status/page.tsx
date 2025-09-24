@@ -400,18 +400,21 @@ function StatusPageContent({ searchParams }: { searchParams: SearchParams }) {
 }
 
 // Main component with Suspense wrapper
-export default function StatusPage({
+export default async function StatusPage({
   searchParams,
 }: {
-  searchParams: SearchParams;
+  searchParams: Promise<SearchParams>;
 }) {
+  // Await searchParams before using them
+  const resolvedSearchParams = await searchParams;
+  
   return (
     <Suspense fallback={
       <div className="flex min-h-screen items-center justify-center">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-yellow-500"></div>
       </div>
     }>
-      <StatusPageContent searchParams={searchParams} />
+      <StatusPageContent searchParams={resolvedSearchParams} />
     </Suspense>
   );
 }

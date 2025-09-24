@@ -52,13 +52,18 @@ export default function AboutEvent() {
           <div>
             <h2 className="mb-4 text-3xl font-extrabold text-black sm:text-4xl">Know More About Event</h2>
             <p className="mb-4 text-black/80">
-              Are you working hard but still missing out on that well‑deserved promotion or salary hike? The truth is,
-              English fluency plays a bigger role in your career growth than you realize.
+              Are you working hard but still missing out on that well‑deserved promotion or salary hike?
             </p>
-            <p className="mb-6 text-black/80">
+            <p className="mb-4 text-black/80">
+              The truth is, English fluency plays a bigger role in your career growth than you realize.
+            </p>
+            <p className="mb-4 text-black/80">
               This free webinar, &quot;Unlock Higher Package with Fluent English&quot;, is designed to help professionals like you
               identify the communication mistakes holding you back and give you practical tools to speak with confidence,
-              clarity, and impact. Led by an expert who has trained 10,000+ professionals and spoken on national and
+              clarity, and impact.
+            </p>
+            <p className="mb-6 text-black/80">
+              Led by an expert who has trained 10,000+ professionals and spoken on national and
               international stages, this session will equip you with the exact strategies to fast‑track your career.
             </p>
 

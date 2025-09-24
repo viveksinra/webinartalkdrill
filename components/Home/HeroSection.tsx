@@ -34,14 +34,18 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
         {/* Left column */}
         <div>
-          <p className="mb-3 inline-block rounded-full bg-yellow-400 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-black">
+          <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white ring-1 ring-white/20 backdrop-blur">
+            <span className="relative inline-flex h-2.5 w-2.5">
+              <span className="absolute inline-flex h-2.5 w-2.5 animate-ping rounded-full bg-red-500/60" aria-hidden />
+              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-red-500" aria-hidden />
+            </span>
             Live Webinar
           </p>
 
           <h1 className="mb-4 font-extrabold leading-tight">
-            <span className="block text-4xl sm:text-5xl">Unlock higher</span>
-            <span className="block text-4xl sm:text-5xl">package with</span>
-            <span className="block text-4xl sm:text-5xl">fluent English</span>
+            <span className="block bg-gradient-to-r from-yellow-200 via-yellow-300 to-white bg-clip-text text-4xl text-transparent sm:text-5xl">Unlock higher</span>
+            <span className="block bg-gradient-to-r from-yellow-200 via-yellow-300 to-white bg-clip-text text-4xl text-transparent sm:text-5xl">package with</span>
+            <span className="block bg-gradient-to-r from-yellow-200 via-yellow-300 to-white bg-clip-text text-4xl text-transparent sm:text-5xl">fluent English</span>
           </h1>
 
           <p className="mb-4 text-sm text-white/90">
@@ -80,8 +84,22 @@ export default function HeroSection() {
             ))}
           </ul>
 
-          <button className="inline-flex items-center rounded-full bg-yellow-400 px-5 py-2 text-sm font-semibold text-black shadow hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-yellow-200">
-            Register Now @ ₹21
+          <button className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-yellow-400 px-6 py-2.5 text-sm font-semibold text-black shadow-lg transition-transform duration-300 ease-out hover:scale-[1.03] hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-yellow-200">
+            <span className="relative z-[1] flex items-center gap-2">
+              <span>Register Now @ ₹21</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="h-4 w-4 transition-transform duration-300 ease-out group-hover:translate-x-0.5"
+                aria-hidden
+              >
+                <path d="M13.5 4.5a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06l4.72-4.72H3.75a.75.75 0 0 1 0-1.5h14.47l-4.72-4.72a.75.75 0 0 1 0-1.06Z" />
+              </svg>
+            </span>
+            <span className="pointer-events-none absolute inset-0 rounded-full">
+              <span className="absolute -left-1/2 top-0 h-full w-1/3 -translate-x-full rotate-12 bg-white/40 blur-md transition-transform duration-700 ease-out group-hover:translate-x-[250%]" aria-hidden />
+            </span>
           </button>
         </div>
 
