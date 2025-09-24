@@ -13,9 +13,14 @@ function getTimePartsUntil(target: Date): TimeParts {
   const now = new Date();
   const diffMs = Math.max(0, target.getTime() - now.getTime());
   const totalSeconds = Math.floor(diffMs / 1000);
-  const hours = Math.floor(totalSeconds / 3600);
-  const minutes = Math.floor((totalSeconds % 3600) / 60);
-  const seconds = totalSeconds % 60;
+  
+  // Cap the total time at 3 hours (10800 seconds)
+  const cappedSeconds = Math.min(totalSeconds, 10800 - 1); // 2:59:59 max
+  
+  const hours = Math.floor(cappedSeconds / 3600);
+  const minutes = Math.floor((cappedSeconds % 3600) / 60);
+  const seconds = cappedSeconds % 60;
+  
   return { hours, minutes, seconds };
 }
 

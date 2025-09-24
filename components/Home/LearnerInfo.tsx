@@ -1,13 +1,50 @@
+"use client";
 import Container from "@/components/Container";
+import Image from "next/image";
+import { useState } from "react";
 
-const logos = [
-  "OpenZeppelin",
-  "ORACLE",
-  "MORPHEUS",
-  "SAMSUNG",
-  "monday.com",
-  "segment",
-  "PROTONET",
+type CompanyLogo = {
+  name: string;
+  logoPath: string;
+  alt: string;
+};
+
+const logos: CompanyLogo[] = [
+  {
+    name: "OpenZeppelin",
+    logoPath: "/assets/logos/companies/openzeppelin.png",
+    alt: "OpenZeppelin Logo"
+  },
+  {
+    name: "ORACLE",
+    logoPath: "/assets/logos/companies/oracle.png",
+    alt: "Oracle Logo"
+  },
+  {
+    name: "MORPHEUS",
+    logoPath: "/assets/logos/companies/morpheus.png",
+    alt: "Morpheus Logo"
+  },
+  {
+    name: "SAMSUNG",
+    logoPath: "/assets/logos/companies/samsung.png",
+    alt: "Samsung Logo"
+  },
+  {
+    name: "monday.com",
+    logoPath: "/assets/logos/companies/monday.png",
+    alt: "Monday.com Logo"
+  },
+  {
+    name: "segment",
+    logoPath: "/assets/logos/companies/segment.png",
+    alt: "Segment Logo"
+  },
+  {
+    name: "PROTONET",
+    logoPath: "/assets/logos/companies/protonet.png",
+    alt: "Protonet Logo"
+  },
 ];
 
 type Stat = {
@@ -49,6 +86,31 @@ const stats: Stat[] = [
   },
 ];
 
+// Component to handle individual logo with fallback
+function LogoItem({ logo }: { logo: CompanyLogo }) {
+  const [imageError, setImageError] = useState(false);
+
+  if (imageError) {
+    // Fallback to text if image fails to load
+    return (
+      <span className="text-sm font-semibold uppercase tracking-wide sm:text-base text-gray-600">
+        {logo.name}
+      </span>
+    );
+  }
+
+  return (
+    <Image
+      src={logo.logoPath}
+      alt={logo.alt}
+      width={120}
+      height={60}
+      className="object-contain filter grayscale hover:grayscale-0 transition-all duration-300 max-h-12 w-auto"
+      onError={() => setImageError(true)}
+    />
+  );
+}
+
 export default function LearnerInfo() {
   return (
     <section className="relative w-full bg-white py-10 sm:py-14">
@@ -58,11 +120,9 @@ export default function LearnerInfo() {
           Proud to See Our Learners At
         </h3>
         <ul className="mx-auto mb-10 grid max-w-5xl grid-cols-2 items-center gap-6 text-black/70 sm:grid-cols-4 lg:grid-cols-7">
-          {logos.map((name) => (
-            <li key={name} className="flex items-center justify-center">
-              <span className="text-sm font-semibold uppercase tracking-wide sm:text-base">
-                {name}
-              </span>
+          {logos.map((logo) => (
+            <li key={logo.name} className="flex items-center justify-center">
+              <LogoItem logo={logo} />
             </li>
           ))}
         </ul>
