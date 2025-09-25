@@ -11,39 +11,69 @@ type CompanyLogo = {
 
 const logos: CompanyLogo[] = [
   {
-    name: "OpenZeppelin",
-    logoPath: "/assets/logos/companies/openzeppelin.png",
-    alt: "OpenZeppelin Logo"
+    name: "Amazon",
+    logoPath: "/assets/images/home/product/amazon.png",
+    alt: "Amazon Logo"
   },
   {
-    name: "ORACLE",
-    logoPath: "/assets/logos/companies/oracle.png",
+    name: "Microsoft",
+    logoPath: "/assets/images/home/product/Microsoft.png",
+    alt: "Microsoft Logo"
+  },
+  {
+    name: "Oracle",
+    logoPath: "/assets/images/home/product/Oracle.png",
     alt: "Oracle Logo"
   },
   {
-    name: "MORPHEUS",
-    logoPath: "/assets/logos/companies/morpheus.png",
-    alt: "Morpheus Logo"
-  },
-  {
-    name: "SAMSUNG",
-    logoPath: "/assets/logos/companies/samsung.png",
+    name: "Samsung",
+    logoPath: "/assets/images/home/product/samsung.png",
     alt: "Samsung Logo"
   },
   {
-    name: "monday.com",
-    logoPath: "/assets/logos/companies/monday.png",
-    alt: "Monday.com Logo"
+    name: "TCS",
+    logoPath: "/assets/images/home/product/Tcs.png",
+    alt: "TCS Logo"
   },
   {
-    name: "segment",
-    logoPath: "/assets/logos/companies/segment.png",
-    alt: "Segment Logo"
+    name: "Salesforce",
+    logoPath: "/assets/images/home/product/Salesforce.png",
+    alt: "Salesforce Logo"
   },
   {
-    name: "PROTONET",
-    logoPath: "/assets/logos/companies/protonet.png",
-    alt: "Protonet Logo"
+    name: "Infosys",
+    logoPath: "/assets/images/home/product/infosys.png",
+    alt: "Infosys Logo"
+  },
+  {
+    name: "Wipro",
+    logoPath: "/assets/images/home/product/wipro.png",
+    alt: "Wipro Logo"
+  },
+  {
+    name: "HCL",
+    logoPath: "/assets/images/home/product/hcl.png",
+    alt: "HCL Logo"
+  },
+  {
+    name: "IBM",
+    logoPath: "/assets/images/home/product/ibm.png",
+    alt: "IBM Logo"
+  },
+  {
+    name: "ICICI",
+    logoPath: "/assets/images/home/product/ICICI.png",
+    alt: "ICICI Logo"
+  },
+  {
+    name: "Indigo",
+    logoPath: "/assets/images/home/product/indigo.png",
+    alt: "Indigo Logo"
+  },
+  {
+    name: "Unilever",
+    logoPath: "/assets/images/home/product/uniliver.png",
+    alt: "Unilever Logo"
   },
 ];
 
@@ -130,19 +160,34 @@ export default function LearnerInfo() {
           </h3>
         </div>
         
-        <ul className="mx-auto mb-16 grid max-w-6xl grid-cols-2 items-center gap-8 text-black/70 sm:grid-cols-4 lg:grid-cols-7">
-          {logos.map((logo, index) => (
-            <li 
-              key={logo.name} 
-              className="flex items-center justify-center group"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="transform transition-all duration-300 hover:scale-110 hover:-translate-y-2 p-4 rounded-xl hover:bg-white hover:shadow-lg">
-                <LogoItem logo={logo} />
+        {/* Animated Logo Carousel */}
+        <div className="relative overflow-hidden mb-16 w-full">
+          <div className="flex items-center gap-12 whitespace-nowrap animate-logo-scroll">
+            {/* First set of logos */}
+            {logos.map((logo, index) => (
+              <div 
+                key={`first-${logo.name}`}
+                className="flex-shrink-0 flex items-center justify-center group px-4"
+              >
+                <div className="transform transition-all duration-300 hover:scale-110 p-4 rounded-xl hover:bg-white/80 hover:shadow-lg">
+                  <LogoItem logo={logo} />
+                </div>
               </div>
-            </li>
-          ))}
-        </ul>
+            ))}
+            {/* Second set for seamless loop */}
+            {logos.map((logo, index) => (
+              <div 
+                key={`second-${logo.name}`}
+                className="flex-shrink-0 flex items-center justify-center group px-4"
+              >
+                <div className="transform transition-all duration-300 hover:scale-110 p-4 rounded-xl hover:bg-white/80 hover:shadow-lg">
+                  <LogoItem logo={logo} />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        
 
         {/* About */}
         <div className="text-center mb-12">

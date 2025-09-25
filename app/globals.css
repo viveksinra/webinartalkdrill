@@ -133,6 +133,15 @@ body {
   }
 }
 
+@keyframes scroll-right-to-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /* Animation Utilities */
 .animate-gradient-shift {
   background-size: 200% 200%;
@@ -177,6 +186,14 @@ body {
 
 .animate-slideUp {
   animation: slideUp 0.6s ease-out forwards;
+}
+
+.animate-logo-scroll {
+  animation: scroll-right-to-left 40s linear infinite;
+}
+
+.animate-logo-scroll:hover {
+  animation-play-state: paused;
 }
 
 /* Animation Delays */
