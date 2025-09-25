@@ -46,7 +46,7 @@ const bonusItems = [
   { title: "Goal Breakdown Worksheet", price: "₹1,499", icon: "📋", description: "Step-by-step career planning guide" },
   { title: "Notion Vocabulary Tracker", price: "₹2,499", icon: "📚", description: "Smart vocabulary building system" },
   { title: "Professional Checklist Template", price: "₹999", icon: "✅", description: "Communication readiness assessment" },
-  { title: "Extra Resources Bundle", price: "₹3,499", icon: "📦", description: "Comprehensive learning materials" },
+  { title: "Extra Resources Bundle", price: "₹3,000", icon: "📦", description: "Comprehensive learning materials" },
   { title: "Vocabulary Excel Lists", price: "₹1,999", icon: "📊", description: "Industry-specific word collections" },
   { title: "Smart Tools Access", price: "Free", icon: "🤖", description: "AI-powered practice platform" }
 ];
@@ -113,7 +113,7 @@ export default function Section3() {
                   <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
                     Exclusive Resources Worth
                     <span className="block text-4xl sm:text-5xl bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
-                      ₹10,499
+                      ₹10,000
                     </span>
                   </h3>
                   <p className="text-lg text-gray-600">
@@ -138,7 +138,7 @@ export default function Section3() {
                     </div>
                     <div className="text-right">
                       <div className="text-2xl font-bold text-green-600">FREE</div>
-                      <div className="text-sm text-gray-500 line-through">₹10,499</div>
+                      <div className="text-sm text-gray-500 line-through">₹10,000</div>
                     </div>
                   </div>
                 </div>
