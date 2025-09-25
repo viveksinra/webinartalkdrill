@@ -140,7 +140,7 @@ export default function LearnerReview() {
 
                 {/* Review Text */}
                 <blockquote className="text-white/90 text-sm leading-relaxed mb-6 flex-grow italic group-hover:text-white transition-colors duration-300">
-                  "{review.text}"
+                  &ldquo;{review.text}&rdquo;
                 </blockquote>
 
                 {/* Author Info */}
@@ -173,6 +173,18 @@ export default function LearnerReview() {
                 ))}
               </div>
             </div>
+            <a
+              href="#register"
+              className="group relative mt-3 inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-yellow-500 to-amber-500 px-7 py-3 text-base font-semibold text-gray-900 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-yellow-300"
+            >
+              <span className="relative z-10 flex items-center gap-2">
+                Register Now
+                <svg className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-yellow-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+            </a>
           </div>
         </div>
       </Container>

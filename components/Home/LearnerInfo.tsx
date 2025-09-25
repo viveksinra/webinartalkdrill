@@ -113,49 +113,109 @@ function LogoItem({ logo }: { logo: CompanyLogo }) {
 
 export default function LearnerInfo() {
   return (
-    <section className="relative w-full bg-white py-10 sm:py-14">
-      <Container>
+    <section className="relative w-full bg-gradient-to-br from-gray-50 to-white py-12 sm:py-16 overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-r from-purple-200/30 to-blue-200/30 rounded-full blur-xl"></div>
+      <div className="absolute bottom-20 right-10 w-48 h-48 bg-gradient-to-r from-yellow-200/30 to-orange-200/30 rounded-full blur-2xl"></div>
+      
+      <Container className="relative z-10">
         {/* Logos */}
-        <h3 className="mb-6 text-center text-lg font-semibold text-black sm:text-xl">
-          Proud to See Our Learners At
-        </h3>
-        <ul className="mx-auto mb-10 grid max-w-5xl grid-cols-2 items-center gap-6 text-black/70 sm:grid-cols-4 lg:grid-cols-7">
-          {logos.map((logo) => (
-            <li key={logo.name} className="flex items-center justify-center">
-              <LogoItem logo={logo} />
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-100 to-blue-100 rounded-full px-4 py-2 mb-4">
+            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+            <span className="text-sm font-medium text-gray-700">Trusted by Professionals</span>
+          </div>
+          <h3 className="text-xl font-bold text-gray-800 sm:text-2xl">
+            Proud to See Our Learners At
+          </h3>
+        </div>
+        
+        <ul className="mx-auto mb-16 grid max-w-6xl grid-cols-2 items-center gap-8 text-black/70 sm:grid-cols-4 lg:grid-cols-7">
+          {logos.map((logo, index) => (
+            <li 
+              key={logo.name} 
+              className="flex items-center justify-center group"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <div className="transform transition-all duration-300 hover:scale-110 hover:-translate-y-2 p-4 rounded-xl hover:bg-white hover:shadow-lg">
+                <LogoItem logo={logo} />
+              </div>
             </li>
           ))}
         </ul>
 
         {/* About */}
-        <h2 className="mb-6 text-center text-2xl font-semibold text-black sm:text-3xl">About TalkDrill</h2>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-800 sm:text-4xl mb-4">
+            About{" "}
+            <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+              TalkDrill
+            </span>
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Transforming English communication skills for professionals worldwide
+          </p>
+        </div>
 
         {/* Stat cards */}
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {stats.map((s, idx) => (
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 mb-12">
+          {stats.map((s, index) => (
             <div
               key={s.value}
-              className={`relative rounded-2xl ${s.bg} ${s.text} p-6 text-center shadow`}
+              className={`group relative rounded-2xl ${s.bg} ${s.text} p-6 text-center shadow-lg hover:shadow-2xl transform transition-all duration-500 hover:scale-105 hover:-translate-y-2 cursor-pointer`}
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
-              {/* Overlapped avatars on the 3rd card for visual flair */}
-         
-
-              <div className="mt-2 text-xl font-extrabold sm:text-2xl">{s.value}</div>
-              <div className="mt-2 text-xs sm:text-sm">
-                <div>{s.title}</div>
-                <div className="opacity-90">{s.description}</div>
+              {/* Hover overlay effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              
+              {/* Floating icon effect */}
+              <div className="absolute -top-3 -right-3 w-6 h-6 bg-white/20 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:animate-bounce"></div>
+              
+              <div className="relative z-10">
+                <div className="text-2xl font-extrabold sm:text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">
+                  {s.value}
+                </div>
+                <div className="text-sm sm:text-base">
+                  <div className="font-semibold">{s.title}</div>
+                  <div className="opacity-90 mt-1">{s.description}</div>
+                </div>
               </div>
+              
+              {/* Bottom accent line */}
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white/30 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
             </div>
           ))}
         </div>
 
-        <div className="mt-8 text-center">
-          <a
-            href="#register"
-            className="text-base font-semibold text-[#4537e6] hover:underline"
-          >
-            Join 15,000+ Learners Today
-          </a>
+        {/* Enhanced CTA Section */}
+        <div className="text-center">
+          <div className="inline-flex flex-col items-center gap-4 bg-gradient-to-r from-white/80 to-gray-50/80 backdrop-blur-sm rounded-3xl px-8 py-6 border border-gray-200 shadow-lg">
+            <p className="text-lg font-semibold text-gray-800">
+              Join 15,000+ Learners Today
+            </p>
+            <div className="flex items-center gap-2 text-purple-600 mb-2">
+              <span className="text-sm font-medium">Start Your Journey Now</span>
+              <div className="flex -space-x-1">
+                {[1, 2, 3].map((i) => (
+                  <div key={i} className="w-5 h-5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full border-2 border-white flex items-center justify-center text-xs font-bold text-white">
+                    ✓
+                  </div>
+                ))}
+              </div>
+            </div>
+            <a
+              href="#register"
+              className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-yellow-500 to-amber-500 px-8 py-3 text-base font-semibold text-gray-900 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-yellow-300"
+            >
+              <span className="relative z-10 flex items-center gap-2">
+                Register Now
+                <svg className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-yellow-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+            </a>
+          </div>
         </div>
       </Container>
     </section>

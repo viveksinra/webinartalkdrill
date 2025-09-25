@@ -12,8 +12,6 @@ type TimeParts = {
 
 function getDynamicTargetTime(): Date {
   const now = new Date();
-  const currentHour = now.getHours();
-  const currentMinute = now.getMinutes();
   
   // Create a target time for today between 20 minutes and 3 hours from now
   const minMinutes = 20;
