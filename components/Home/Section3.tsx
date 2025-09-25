@@ -9,7 +9,7 @@ export default function Section3() {
           What You&apos;ll Gain by Attending
         </h2>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <BenefitCard
             imageSrc="/assets/images/home/discover.png"
             title={"Discover Career-\nCosting Mistakes"}
