@@ -23,7 +23,8 @@ const reviews: Review[] = [
     role: "Marketing Manager",
     text:
       "The webinar gave me practical tips, not theory. The free demo session and TalkDrill practice coins made it so easy to continue my learning journey.",
-    avatar: "https://cdn.pixabay.com/photo/2024/02/12/17/23/ai-generated-8569065_1280.jpg",
+    avatar: "https://img.freepik.com/free-photo/young-beautiful-hispanic-woman-standing-with-arms-crossed-gesture-street_839833-27487.jpg",
+   
     rating: 5,
   },
   {
@@ -178,7 +179,8 @@ export default function LearnerReview() {
               className="group relative mt-3 inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-yellow-500 to-amber-500 px-7 py-3 text-base font-semibold text-gray-900 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-yellow-300"
             >
               <span className="relative z-10 flex items-center gap-2">
-                Register Now
+              Register Now @<span className="font-bold">₹21</span>
+
                 <svg className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>

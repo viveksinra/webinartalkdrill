@@ -94,23 +94,23 @@ const stats: Stat[] = [
     text: "text-black",
   },
   {
-    value: "50000k+",
+    value: "500k+",
     title: "Funding secured to",
     description: "scale globally",
     bg: "bg-[#4537e6]",
     text: "text-white",
   },
   {
-    value: "40+ Countries",
-    title: "Learners practicing English",
-    description: "with TalkDrill",
+    value: "40+",
+    title: "Countries with",
+    description: "active learners",
     bg: "bg-yellow-400",
     text: "text-black",
   },
   {
-    value: "1000k+ Minutes",
-    title: "Of English speaking practice",
-    description: "delivered",
+    value: "1M+",
+    title: "Minutes of English speaking",
+    description: "practice delivered",
     bg: "bg-[#4537e6]",
     text: "text-white",
   },
@@ -217,12 +217,12 @@ export default function LearnerInfo() {
               <div className="absolute -top-3 -right-3 w-6 h-6 bg-white/20 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:animate-bounce"></div>
               
               <div className="relative z-10">
-                <div className="text-2xl font-extrabold sm:text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">
+                <div className="text-2xl sm:text-3xl mb-2 group-hover:scale-110 transition-transform duration-300 font-extrabold">
                   {s.value}
                 </div>
-                <div className="text-sm sm:text-base">
-                  <div className="font-semibold">{s.title}</div>
-                  <div className="opacity-90 mt-1">{s.description}</div>
+                <div className="text-sm sm:text-base font-semibold">
+                  <div>{s.title}</div>
+                  <div className="mt-1">{s.description}</div>
                 </div>
               </div>
               
@@ -253,7 +253,7 @@ export default function LearnerInfo() {
               className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-yellow-500 to-amber-500 px-8 py-3 text-base font-semibold text-gray-900 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-yellow-300"
             >
               <span className="relative z-10 flex items-center gap-2">
-                Register Now
+                Register Now @<span className="font-bold">₹21</span>
                 <svg className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>

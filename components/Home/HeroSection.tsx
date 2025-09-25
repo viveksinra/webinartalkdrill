@@ -4,16 +4,21 @@ import Container from "@/components/Container";
 type BulletPoint = {
   text: string;
   highlight?: string;
+  highlightPosition?: "start" | "end";
 };
 
 const bulletPoints: BulletPoint[] = [
   {
-    text: "4x your salary by mastering",
-    highlight: "communication skills",
+    text: "by mastering communication skills",
+    highlight: "4x your salary",
+    highlightPosition: "start",
   },
   { text: "Perform and negotiate better in interviews" },
   { text: "Feel more confident in meetings" },
-  { text: "Get" },
+  { text: "Get",
+    highlight: "Bonus Worth ₹10,000 for FREE",
+    highlightPosition: "end",
+   },
 ];
 
 export default function HeroSection() {
@@ -92,15 +97,26 @@ export default function HeroSection() {
                   />
                 </svg>
                 <span className="leading-relaxed">
-                  {b.text}
-                  {b.highlight ? (
+                  {b.highlight && b.highlightPosition === "start" ? (
                     <>
-                      {" "}
                       <span className="font-semibold text-yellow-300 transition-colors duration-300 group-hover:text-yellow-200">
                         {b.highlight}
                       </span>
+                      {b.text ? <> {b.text}</> : null}
                     </>
-                  ) : null}
+                  ) : (
+                    <>
+                      {b.text}
+                      {b.highlight ? (
+                        <>
+                          {" "}
+                          <span className="font-semibold text-yellow-300 transition-colors duration-300 group-hover:text-yellow-200">
+                            {b.highlight}
+                          </span>
+                        </>
+                      ) : null}
+                    </>
+                  )}
                 </span>
               </li>
             ))}
