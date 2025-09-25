@@ -164,7 +164,7 @@ export default function LearnerInfo() {
         <div className="relative overflow-hidden mb-16 w-full">
           <div className="flex items-center gap-12 whitespace-nowrap animate-logo-scroll">
             {/* First set of logos */}
-            {logos.map((logo, index) => (
+            {logos.map((logo) => (
               <div 
                 key={`first-${logo.name}`}
                 className="flex-shrink-0 flex items-center justify-center group px-4"
@@ -175,7 +175,7 @@ export default function LearnerInfo() {
               </div>
             ))}
             {/* Second set for seamless loop */}
-            {logos.map((logo, index) => (
+            {logos.map((logo) => (
               <div 
                 key={`second-${logo.name}`}
                 className="flex-shrink-0 flex items-center justify-center group px-4"

@@ -120,7 +120,7 @@ export default function MeetYourHost() {
               <div className="space-y-4">
                 <h4 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
                   <span className="text-2xl">🎯</span>
-                  What You'll Master
+                  What You&apos;ll Master
                 </h4>
                 {expertise.map((item, index) => (
                   <div 

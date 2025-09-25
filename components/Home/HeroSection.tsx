@@ -13,7 +13,9 @@ const bulletPoints: BulletPoint[] = [
   },
   { text: "Perform and negotiate better in interviews" },
   { text: "Feel more confident in meetings" },
-  { text: "Get Bonus worth ₹10,000 for FREE" },
+  { text: "Get",
+    highlight: "Bonus Worth ₹10,000 for FREE"
+   },
 ];
 
 export default function HeroSection() {
@@ -43,9 +45,9 @@ export default function HeroSection() {
           </p>
 
           <h1 className="mb-4 font-extrabold leading-tight">
-            <span className="block bg-gradient-to-r from-yellow-200 via-yellow-300 to-white bg-clip-text text-4xl text-transparent sm:text-5xl">Unlock higher</span>
-            <span className="block bg-gradient-to-r from-yellow-200 via-yellow-300 to-white bg-clip-text text-4xl text-transparent sm:text-5xl">package with</span>
-            <span className="block bg-gradient-to-r from-yellow-200 via-yellow-300 to-white bg-clip-text text-4xl text-transparent sm:text-5xl">fluent English</span>
+            <span className="block bg-gradient-to-r from-yellow-200 via-yellow-300 to-white bg-clip-text text-4xl text-transparent sm:text-5xl">unlockHigher</span>
+            <span className="block bg-gradient-to-r from-yellow-200 via-yellow-300 to-white bg-clip-text text-4xl text-transparent sm:text-5xl">packageWith</span>
+            <span className="block bg-gradient-to-r from-yellow-200 via-yellow-300 to-white bg-clip-text text-4xl text-transparent sm:text-5xl">fluentEnglish</span>
           </h1>
 
           <div className="mb-6 inline-flex items-center gap-2 rounded-lg bg-white/10 px-4 py-2.5 backdrop-blur-sm ring-1 ring-white/20">

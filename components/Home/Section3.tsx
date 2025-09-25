@@ -70,7 +70,7 @@ export default function Section3() {
               <span className="text-sm font-medium text-indigo-800">Your Learning Outcomes</span>
             </div>
             <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-gray-900 via-indigo-900 to-purple-900 bg-clip-text text-transparent mb-4">
-              What You'll Gain
+              What You&apos;ll Gain
               <span className="block text-3xl sm:text-4xl bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
                 by Attending
               </span>

@@ -178,9 +178,9 @@ export default function AboutEvent() {
               {/* What you'll learn */}
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2 flex items-center gap-2">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2 flex items-center gap-2">
                     <span className="text-3xl">🎯</span>
-                    What You'll Master
+                    What You&apos;ll Master
                   </h3>
                   <p className="text-gray-600">Transform your communication with these proven strategies:</p>
                 </div>
@@ -221,7 +221,7 @@ export default function AboutEvent() {
                       <span className="text-2xl">⏰</span>
             <div>
                         <h4 className="font-bold text-lg">Limited Time Offer!</h4>
-                        <p className="text-blue-100 text-sm">Don't miss this career-changing opportunity</p>
+                        <p className="text-blue-100 text-sm">Don&apos;t miss this career-changing opportunity</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-6 text-sm">
