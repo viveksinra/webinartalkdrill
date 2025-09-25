@@ -87,28 +87,28 @@ type Stat = {
 
 const stats: Stat[] = [
   {
-    value: "15,000+",
+    value: "10,000+",
     title: "Learners already on",
     description: "our waitlist",
     bg: "bg-yellow-400",
     text: "text-black",
   },
   {
-    value: "5,00,000+",
+    value: "50000k+",
     title: "Funding secured to",
     description: "scale globally",
     bg: "bg-[#4537e6]",
     text: "text-white",
   },
   {
-    value: "40+ Counties",
+    value: "40+ Countries",
     title: "Learners practicing English",
     description: "with TalkDrill",
     bg: "bg-yellow-400",
     text: "text-black",
   },
   {
-    value: "1,000,000+ Minutes",
+    value: "1000k+ Minutes",
     title: "Of English speaking practice",
     description: "delivered",
     bg: "bg-[#4537e6]",
@@ -236,7 +236,7 @@ export default function LearnerInfo() {
         <div className="text-center">
           <div className="inline-flex flex-col items-center gap-4 bg-gradient-to-r from-white/80 to-gray-50/80 backdrop-blur-sm rounded-3xl px-8 py-6 border border-gray-200 shadow-lg">
             <p className="text-lg font-semibold text-gray-800">
-              Join 15,000+ Learners Today
+              Join 10,000+ Learners Today
             </p>
             <div className="flex items-center gap-2 text-purple-600 mb-2">
               <span className="text-sm font-medium">Start Your Journey Now</span>
