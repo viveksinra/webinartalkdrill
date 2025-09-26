@@ -48,6 +48,9 @@ const stats = [
 ];
 
 export default function AboutEvent() {
+  const mid = Math.ceil(bulletPoints.length / 2);
+  const leftPoints = bulletPoints.slice(0, mid);
+  const rightPoints = bulletPoints.slice(mid);
   return (
     <section className="relative w-full bg-gradient-to-br from-blue-50/50 via-white to-purple-50/30 py-16 sm:py-20 overflow-hidden">
       {/* Background decorative elements */}
@@ -175,8 +178,12 @@ export default function AboutEvent() {
                 </div>
               </div>
 
-              {/* What you'll learn */}
-              <div className="space-y-6">
+
+            </div>
+
+          </div>
+                        {/* What you'll learn */}
+                        <div className="space-y-6 mt-8">
                 <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2 flex items-center gap-2">
                     <span className="text-3xl">🎯</span>
@@ -185,36 +192,63 @@ export default function AboutEvent() {
                   <p className="text-gray-600">Transform your communication with these proven strategies:</p>
                 </div>
 
-                <div className="space-y-3">
-                  {bulletPoints.map((point, index) => (
-                    <div 
-                      key={point.text} 
-                      className="group relative p-4 rounded-2xl border border-gray-100 bg-white/60 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:border-blue-200 hover:bg-white hover:-translate-y-1 cursor-pointer animate-slide-up"
-                      style={{animationDelay: `${index * 100}ms`}}
-                    >
-                      <div className="absolute inset-0 bg-gradient-to-r from-blue-50/50 to-purple-50/50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      <div className="relative flex items-start gap-4">
-                        <div className="text-2xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                          {point.icon}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mt-">
+                  <div className="space-y-3">
+                    {leftPoints.map((point, index) => (
+                      <div
+                        key={point.text}
+                        className="group relative p-4 rounded-2xl border border-gray-100 bg-white/60 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:border-blue-200 hover:bg-white hover:-translate-y-1 cursor-pointer animate-slide-up"
+                        style={{ animationDelay: `${index * 100}ms` }}
+                      >
+                        <div className="absolute inset-0 bg-gradient-to-r from-blue-50/50 to-purple-50/50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div className="relative flex items-start gap-4">
+                          <div className="text-2xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                            {point.icon}
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <h4 className="font-semibold text-gray-900 mb-1 group-hover:text-blue-700 transition-colors duration-300 leading-tight">
+                              {point.text}
+                            </h4>
+                            <p className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+                              {point.description}
+                            </p>
+                          </div>
+                          <div className="w-2 h-2 rounded-full bg-blue-400 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-150 flex-shrink-0 mt-2"></div>
                         </div>
-                        <div className="flex-1 min-w-0">
-                          <h4 className="font-semibold text-gray-900 mb-1 group-hover:text-blue-700 transition-colors duration-300 leading-tight">
-                            {point.text}
-                          </h4>
-                          <p className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
-                            {point.description}
-                          </p>
-                        </div>
-                        <div className="w-2 h-2 rounded-full bg-blue-400 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-150 flex-shrink-0 mt-2"></div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
+                  <div className="space-y-3">
+                    {rightPoints.map((point, index) => (
+                      <div
+                        key={point.text}
+                        className="group relative p-4 rounded-2xl border border-gray-100 bg-white/60 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:border-blue-200 hover:bg-white hover:-translate-y-1 cursor-pointer animate-slide-up"
+                        style={{ animationDelay: `${(index + leftPoints.length) * 100}ms` }}
+                      >
+                        <div className="absolute inset-0 bg-gradient-to-r from-blue-50/50 to-purple-50/50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div className="relative flex items-start gap-4">
+                          <div className="text-2xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                            {point.icon}
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <h4 className="font-semibold text-gray-900 mb-1 group-hover:text-blue-700 transition-colors duration-300 leading-tight">
+                              {point.text}
+                            </h4>
+                            <p className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+                              {point.description}
+                            </p>
+                          </div>
+                          <div className="w-2 h-2 rounded-full bg-blue-400 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-150 flex-shrink-0 mt-2"></div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
 
               {/* CTA Section */}
               <div className="pt-6">
-                <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 p-6 text-white">
+                <a href="https://rzp.io/rzp/f0HDYyn" target="_blank" rel="noopener noreferrer" className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 p-6 text-white block">
                   <div className="absolute inset-0 bg-black/10"></div>
                   <div className="relative z-10">
                     <div className="flex items-center gap-3 mb-3">
@@ -237,10 +271,8 @@ export default function AboutEvent() {
                   </div>
                   {/* Subtle animation overlay */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full animate-shimmer"></div>
-                </div>
+                </a>
               </div>
-            </div>
-          </div>
         </div>
       </Container>
 

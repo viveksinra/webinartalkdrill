@@ -190,13 +190,13 @@ export default function MeetYourHost() {
 
               {/* Call to action */}
               <div className="pt-4">
-                <div className="flex items-center gap-3 p-4 rounded-2xl bg-gradient-to-r from-purple-50 to-blue-50 border border-purple-100">
+                <a href="https://rzp.io/rzp/f0HDYyn" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 rounded-2xl bg-gradient-to-r from-purple-50 to-blue-50 border border-purple-100 block">
                   <div className="text-2xl">🚀</div>
                   <div>
                     <p className="text-sm font-medium text-gray-800">Ready to transform your communication?</p>
                     <p className="text-xs text-gray-600">Join the webinar and start your journey today!</p>
                   </div>
-                </div>
+                </a>
               </div>
         </div>
       </Container>

@@ -28,7 +28,7 @@ const benefits: BenefitData[] = [
   },
   {
     imageSrc: "/assets/images/home/boost.png",
-    title: "Boost Your\nPromotion Chances",
+    title: "Boost Your\nPromotion",
     description: "Proven strategies to showcase leadership and clarity",
     color: "from-green-500 to-emerald-500",
     bgColor: "from-green-50 to-emerald-50"
@@ -270,7 +270,7 @@ function BenefitCard({ imageSrc, title, description, color, bgColor, delay }: Be
         </div>
         
         {/* Content */}
-        <h3 className="mb-4 text-xl font-bold leading-tight whitespace-pre-line transition-colors duration-300 group-hover:text-indigo-700 text-gray-900 min-h-[52px] line-clamp-2">
+        <h3 className="mb-4 text-base sm:text-lg font-bold leading-tight whitespace-pre-line transition-colors duration-300 group-hover:text-indigo-700 text-gray-900 min-h-[52px] line-clamp-2">
           {title}
         </h3>
         <p className="text-sm text-gray-600 leading-relaxed transition-colors duration-300 group-hover:text-gray-700 min-h-[72px]">

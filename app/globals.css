@@ -18,14 +18,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Line clamp utility (force exactly two lines max) */
-.line-clamp-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
 /* Custom Animations */
 @keyframes fade-in {
   from {
@@ -245,4 +237,10 @@ button, a {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+/* Custom font size utility: supports responsive variants like sm:text-4_5xl */
+@utility text-4_5xl {
+  font-size: 2.8rem;
+  line-height: 1.1;
 }

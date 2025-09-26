@@ -47,10 +47,9 @@ export default function HeroSection() {
             Live Webinar
           </p>
 
-          <h1 className="mb-4 font-extrabold leading-tight">
-            <span className="block bg-gradient-to-r from-yellow-200 via-yellow-300 to-white bg-clip-text text-4xl text-transparent sm:text-5xl">Unlock Higher</span>
-            <span className="block bg-gradient-to-r from-yellow-200 via-yellow-300 to-white bg-clip-text text-4xl text-transparent sm:text-5xl">Package With</span>
-            <span className="block bg-gradient-to-r from-yellow-200 via-yellow-300 to-white bg-clip-text text-4xl text-transparent sm:text-5xl">Fluent English</span>
+          <h1 className="mb-4 font-extrabold leading-tight space-y-2 sm:space-y-3 bg">
+            <span className="block bg-gradient-to-r from-yellow-200 via-yellow-300 to-white bg-clip-text text-3xl text-transparent sm:text-4_5xl">Unlock Higher Package</span>
+            <span className="block bg-gradient-to-r from-yellow-200 via-yellow-300 to-white bg-clip-text text-3xl text-transparent sm:text-4_5xl">With Fluent English</span>
           </h1>
 
           <div className="mb-6 inline-flex items-center gap-2 rounded-lg bg-white/10 px-4 py-2.5 backdrop-blur-sm ring-1 ring-white/20">
