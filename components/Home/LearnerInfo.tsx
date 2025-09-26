@@ -109,8 +109,8 @@ const stats: Stat[] = [
   },
   {
     value: "1M+",
-    title: "Minutes of English speaking",
-    description: "practice delivered",
+    title: "English speaking",
+    description: "minutes delivered",
     bg: "bg-[#4537e6]",
     text: "text-white",
   },

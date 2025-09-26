@@ -22,8 +22,8 @@ const reviews: Review[] = [
     name: "Priya Sharma",
     role: "Marketing Manager",
     text:
-      "The webinar gave me practical tips, not theory. The free demo session and TalkDrill practice coins made it so easy to continue my learning journey.",
-    avatar: "https://img.freepik.com/free-photo/young-beautiful-hispanic-woman-standing-with-arms-crossed-gesture-street_839833-27487.jpg",
+      "The  practical tips, not theory. The free demo session and TalkDrill practice coins made it so easy to continue my learning journey.",
+    avatar: "https://img.freepik.com/premium-photo/portrait-indian-businesswoman-white-background-holding-laptop_665346-22333.jpg",
    
     rating: 5,
   },

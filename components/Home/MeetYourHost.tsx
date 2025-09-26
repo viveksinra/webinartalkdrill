@@ -147,8 +147,12 @@ export default function MeetYourHost() {
                 ))}
               </div>
 
-              {/* Enhanced Stats Grid */}
-              <div>
+      
+            </div>
+            
+          </div>
+                  {/* Enhanced Stats Grid */}
+                  <div>
                 <h4 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
                   <span className="text-2xl">📊</span>
                   Track Record
@@ -194,8 +198,6 @@ export default function MeetYourHost() {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
         </div>
       </Container>
 
