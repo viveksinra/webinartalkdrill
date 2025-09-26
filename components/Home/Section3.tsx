@@ -162,7 +162,9 @@ export default function Section3() {
 
               {/* Main CTA Button */}
               <a
-                href="#register"
+                href="https://rzp.io/rzp/f0HDYyn"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 px-12 py-6 text-xl font-bold text-white shadow-2xl transition-all duration-500 hover:scale-110 hover:shadow-indigo-500/50 focus:outline-none focus:ring-4 focus:ring-purple-300 animate-pulse-glow"
               >
                 <span className="relative z-10 flex items-center gap-3">
@@ -246,7 +248,7 @@ type BenefitCardProps = BenefitData & {
 function BenefitCard({ imageSrc, title, description, color, bgColor, delay }: BenefitCardProps) {
   return (
     <div 
-      className="group relative animate-fade-in-up rounded-3xl bg-white p-8 shadow-lg transition-all duration-500 ease-out hover:shadow-2xl hover:scale-[1.05] hover:-translate-y-2 cursor-pointer border border-gray-100/50"
+      className="group relative animate-fade-in-up rounded-3xl bg-white p-8 shadow-lg transition-all duration-500 ease-out hover:shadow-2xl hover:scale-[1.05] hover:-translate-y-2 cursor-pointer border border-gray-100/50 h-full"
       style={{ animationDelay: `${delay}ms` }}
     >
       {/* Background gradient on hover */}
@@ -255,7 +257,7 @@ function BenefitCard({ imageSrc, title, description, color, bgColor, delay }: Be
       {/* Floating decoration */}
       <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110 group-hover:animate-bounce"></div>
       
-      <div className="relative z-10">
+      <div className="relative z-10 flex flex-col h-full">
         {/* Icon container with enhanced styling */}
         <div className={`mb-6 inline-flex h-24 w-24 items-center justify-center rounded-3xl bg-gradient-to-br ${color} shadow-lg overflow-hidden transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-hover:shadow-2xl`}>
           <Image
@@ -268,20 +270,13 @@ function BenefitCard({ imageSrc, title, description, color, bgColor, delay }: Be
         </div>
         
         {/* Content */}
-        <h3 className="mb-4 text-xl font-bold leading-tight whitespace-pre-line transition-colors duration-300 group-hover:text-indigo-700 text-gray-900">
+        <h3 className="mb-4 text-xl font-bold leading-tight whitespace-pre-line transition-colors duration-300 group-hover:text-indigo-700 text-gray-900 min-h-[52px]">
           {title}
         </h3>
-        <p className="text-sm text-gray-600 leading-relaxed transition-colors duration-300 group-hover:text-gray-700">
+        <p className="text-sm text-gray-600 leading-relaxed transition-colors duration-300 group-hover:text-gray-700 min-h-[72px]">
           {description}
         </p>
-        
-        {/* Hover indicator */}
-        <div className="mt-4 flex items-center gap-2 text-indigo-600 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-          <span className="text-sm font-medium">Learn more</span>
-          <svg className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </div>
+
       </div>
     </div>
   );
