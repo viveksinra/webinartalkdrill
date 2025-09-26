@@ -123,7 +123,7 @@ export default function HeroSection() {
           </ul>
 
           <div className="space-y-3">
-            <button className="group relative inline-flex w-full items-center justify-center overflow-hidden rounded-full bg-yellow-400 px-6 py-3 text-base font-semibold text-black shadow-lg transition-all duration-300 ease-out motion-safe:hover:scale-[1.03] hover:bg-yellow-300 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-yellow-200/50 motion-safe:active:scale-[0.98] sm:w-auto sm:text-sm md:px-8 md:py-3.5">
+            <a href="https://rzp.io/rzp/f0HDYyn" target="_blank" rel="noopener noreferrer" className="group relative inline-flex w-full items-center justify-center overflow-hidden rounded-full bg-yellow-400 px-6 py-3 text-base font-semibold text-black shadow-lg transition-all duration-300 ease-out motion-safe:hover:scale-[1.03] hover:bg-yellow-300 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-yellow-200/50 motion-safe:active:scale-[0.98] sm:w-auto sm:text-sm md:px-8 md:py-3.5">
               <span className="relative z-[1] flex items-center gap-2">
                 <span>Register Now @ <span className="font-bold">₹21</span></span>
                 <svg
@@ -139,7 +139,7 @@ export default function HeroSection() {
               <span className="pointer-events-none absolute inset-0 rounded-full">
                 <span className="absolute -left-1/2 top-0 h-full w-1/3 -translate-x-full rotate-12 bg-white/40 blur-md transition-transform duration-700 ease-out group-hover:translate-x-[250%]" aria-hidden />
               </span>
-            </button>
+            </a>
             
             <div className="flex items-center gap-2 text-xs text-white/70 sm:text-sm">
               <svg

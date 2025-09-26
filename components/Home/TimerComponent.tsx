@@ -184,12 +184,14 @@ export default function TimerComponent() {
 
           {/* Call to Action Button */}
           <div className="mt-10">
-            <button
-              type="button"
+            <a
+              href="https://rzp.io/rzp/f0HDYyn"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center rounded-full bg-gradient-to-r from-yellow-300 via-yellow-400 to-orange-400 px-6 py-3 font-black text-purple-900 shadow-2xl transition-all duration-300 hover:shadow-yellow-300/50 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-yellow-300 focus:ring-offset-2 focus:ring-offset-purple-900"
             >
               Register Now <span className="ml-1 font-bold">₹21</span>
-            </button>
+            </a>
           </div>
         </div>
       </Container>

@@ -249,7 +249,9 @@ export default function LearnerInfo() {
               </div>
             </div>
             <a
-              href="#register"
+              href="https://rzp.io/rzp/f0HDYyn"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-yellow-500 to-amber-500 px-8 py-3 text-base font-semibold text-gray-900 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-yellow-300"
             >
               <span className="relative z-10 flex items-center gap-2">
