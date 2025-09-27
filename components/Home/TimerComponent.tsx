@@ -54,7 +54,7 @@ function TimeBox({ value, label, isHighlighted = false }: { value: number; label
         }
         group-hover:shadow-3xl group-hover:-translate-y-1
       `}>
-        <div className="relative z-10">{two}</div>
+        <div className="relative z-10 w-[2ch] text-center font-mono tabular-nums">{two}</div>
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100 transform -skew-x-12" />
       </div>
       <div className={`mt-3 text-sm font-semibold uppercase tracking-wider transition-all duration-300 group-hover:text-yellow-200 sm:text-base ${
