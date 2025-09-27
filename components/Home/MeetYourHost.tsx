@@ -82,13 +82,13 @@ export default function MeetYourHost() {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-600 rounded-3xl opacity-20 blur-xl transform rotate-6 group-hover:rotate-12 transition-all duration-500"></div>
                 <div className="relative bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-600 rounded-3xl p-[3px] shadow-2xl transition-all duration-500 group-hover:shadow-purple-500/25 group-hover:scale-[1.02]">
-                  <div className="relative overflow-hidden rounded-[22px] bg-white p-6 transition-all duration-300">
+                  <div className="relative overflow-hidden rounded-[22px] bg-white p-0 transition-all duration-300">
                     <Image
-                      src="/assets/images/home/vishayMain.png"
+                      src="/assets/images/home/vishaySecond.png"
                       alt="Vishay Kaushik - Communication Coach"
                       width={560}
                       height={640}
-                      className="mx-auto h-auto w-full max-w-[400px] transition-all duration-500 group-hover:scale-105"
+                      className="mx-auto h-auto w-full max-w-[400px] p-0 transition-all duration-500 group-hover:scale-105"
                       priority
                     />
                     {/* Floating elements with better positioning */}
@@ -152,7 +152,7 @@ export default function MeetYourHost() {
             
           </div>
                   {/* Enhanced Stats Grid */}
-                  <div>
+                  <div className="mt-8">
                 <h4 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
                   <span className="text-2xl">📊</span>
                   Track Record

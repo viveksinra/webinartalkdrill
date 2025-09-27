@@ -164,16 +164,7 @@ export default function LearnerReview() {
             <p className="text-white/90 text-lg font-medium">
               Don&apos;t Just Read Reviews—Experience It Yourself
             </p>
-            <div className="flex items-center gap-2 text-yellow-400">
-              <span className="text-sm font-semibold">Join 10,000+ Happy Learners</span>
-              <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="w-6 h-6 bg-yellow-400 rounded-full border-2 border-white flex items-center justify-center text-xs font-bold text-gray-800">
-                    {i < 4 ? '👤' : '+'}
-                  </div>
-                ))}
-              </div>
-            </div>
+       
             <a
               href="https://rzp.io/rzp/f0HDYyn"
               target="_blank"

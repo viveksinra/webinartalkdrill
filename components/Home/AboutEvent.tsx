@@ -183,7 +183,7 @@ export default function AboutEvent() {
 
           </div>
                         {/* What you'll learn */}
-                        <div className="space-y-6 mt-8">
+                        <div className="space-y-6 mt-12">
                 <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2 flex items-center gap-2">
                     <span className="text-3xl">🎯</span>
