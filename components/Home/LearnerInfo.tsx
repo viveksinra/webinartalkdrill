@@ -143,7 +143,7 @@ function LogoItem({ logo }: { logo: CompanyLogo }) {
 
 export default function LearnerInfo() {
   return (
-    <section className="relative w-full bg-gradient-to-br from-gray-50 to-white py-12 sm:py-16 overflow-hidden">
+    <section className="relative w-full bg-gradient-to-br from-gray-50 to-white py-12 sm:py-16 overflow-hidden overflow-x-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-r from-purple-200/30 to-blue-200/30 rounded-full blur-xl"></div>
       <div className="absolute bottom-20 right-10 w-48 h-48 bg-gradient-to-r from-yellow-200/30 to-orange-200/30 rounded-full blur-2xl"></div>
@@ -161,8 +161,8 @@ export default function LearnerInfo() {
         </div>
         
         {/* Animated Logo Carousel */}
-        <div className="relative overflow-hidden mb-16 w-full">
-          <div className="flex items-center gap-12 whitespace-nowrap animate-logo-scroll">
+        <div className="relative overflow-hidden mb-16 w-full h-16 sm:h-20">
+          <div className="absolute inset-y-0 left-0 flex items-center gap-12 whitespace-nowrap animate-logo-scroll will-change-transform">
             {/* First set of logos */}
             {logos.map((logo) => (
               <div 
@@ -203,11 +203,11 @@ export default function LearnerInfo() {
         </div>
 
         {/* Stat cards */}
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 mb-12">
+        <div className="grid grid-cols-2 gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4 mb-12">
           {stats.map((s, index) => (
             <div
               key={s.value}
-              className={`group relative rounded-2xl ${s.bg} ${s.text} p-6 text-center shadow-lg hover:shadow-2xl transform transition-all duration-500 hover:scale-105 hover:-translate-y-2 cursor-pointer`}
+              className={`group relative rounded-xl sm:rounded-2xl ${s.bg} ${s.text} p-4 sm:p-6 text-center shadow-lg hover:shadow-2xl transform transition-all duration-500 hover:scale-102 sm:hover:scale-105 hover:-translate-y-1 sm:hover:-translate-y-2 cursor-pointer`}
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               {/* Hover overlay effect */}
@@ -217,10 +217,10 @@ export default function LearnerInfo() {
               <div className="absolute -top-3 -right-3 w-6 h-6 bg-white/20 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:animate-bounce"></div>
               
               <div className="relative z-10">
-                <div className="text-2xl sm:text-3xl mb-2 group-hover:scale-110 transition-transform duration-300 font-extrabold">
+                <div className="text-xl sm:text-3xl mb-2 group-hover:scale-110 transition-transform duration-300 font-extrabold">
                   {s.value}
                 </div>
-                <div className="text-sm sm:text-base font-semibold">
+                <div className="text-xs sm:text-base font-semibold">
                   <div>{s.title}</div>
                   <div className="mt-1">{s.description}</div>
                 </div>

@@ -10,15 +10,15 @@ import HomeFaq from "@/components/Home/HomeFaq";
 export default function Home() {
   return (
     <div className="font-sans">
-      <HeroSection />
+       <HeroSection />
       <Section2 />
        <Section3 />
-     {/* <TimerComponent />
-      <AboutEvent />
-      <MeetYourHost />
-      <LearnerInfo />
-      <LearnerReview />
-      <HomeFaq /> */}
+      <TimerComponent />
+     <AboutEvent />
+   <MeetYourHost />
+      <LearnerInfo />  
+        <LearnerReview />
+     <HomeFaq /> 
     </div>
   );
 }
