@@ -12,13 +12,13 @@ export default function Home() {
     <div className="font-sans">
       <HeroSection />
       <Section2 />
-      <Section3 />
-      <TimerComponent />
+       <Section3 />
+     {/* <TimerComponent />
       <AboutEvent />
       <MeetYourHost />
       <LearnerInfo />
       <LearnerReview />
-      <HomeFaq />
+      <HomeFaq /> */}
     </div>
   );
 }

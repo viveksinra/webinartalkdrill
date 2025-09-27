@@ -81,7 +81,7 @@ export default function Section3() {
           </div>
 
           {/* Enhanced Benefits Grid */}
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 mb-16">
+          <div className="grid grid-cols-2 gap-5 sm:grid-cols-2 lg:grid-cols-4 mb-16">
             {benefits.map((benefit, index) => (
               <BenefitCard key={benefit.title} {...benefit} delay={index * 150} />
             ))}
@@ -248,7 +248,7 @@ type BenefitCardProps = BenefitData & {
 function BenefitCard({ imageSrc, title, description, color, bgColor, delay }: BenefitCardProps) {
   return (
     <div 
-      className="group relative animate-fade-in-up rounded-3xl bg-white p-8 shadow-lg transition-all duration-500 ease-out hover:shadow-2xl hover:scale-[1.05] hover:-translate-y-2 cursor-pointer border border-gray-100/50 h-full"
+      className="group relative animate-fade-in-up rounded-2xl bg-white p-5 sm:p-6 shadow-lg transition-all duration-500 ease-out hover:shadow-2xl hover:scale-[1.03] sm:hover:scale-[1.05] hover:-translate-y-2 cursor-pointer border border-gray-100/50 h-full"
       style={{ animationDelay: `${delay}ms` }}
     >
       {/* Background gradient on hover */}
@@ -259,7 +259,7 @@ function BenefitCard({ imageSrc, title, description, color, bgColor, delay }: Be
       
       <div className="relative z-10 flex flex-col h-full">
         {/* Icon container with enhanced styling */}
-        <div className={`mb-6 inline-flex h-24 w-24 items-center justify-center rounded-3xl bg-gradient-to-br ${color} shadow-lg overflow-hidden transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-hover:shadow-2xl`}>
+        <div className={`mb-4 sm:mb-6 inline-flex h-20 w-20 sm:h-24 sm:w-24 items-center justify-center rounded-2xl sm:rounded-3xl bg-gradient-to-br ${color} shadow-lg overflow-hidden transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-hover:shadow-2xl`}>
           <Image
             src={imageSrc}
             alt={title}
@@ -270,10 +270,10 @@ function BenefitCard({ imageSrc, title, description, color, bgColor, delay }: Be
         </div>
         
         {/* Content */}
-        <h3 className="mb-4 text-base sm:text-lg font-bold leading-tight whitespace-pre-line transition-colors duration-300 group-hover:text-indigo-700 text-gray-900 min-h-[52px] line-clamp-2">
+        <h3 className="mb-2 sm:mb-4 text-sm sm:text-lg font-bold leading-tight whitespace-pre-line transition-colors duration-300 group-hover:text-indigo-700 text-gray-900 min-h-[42px] sm:min-h-[52px] line-clamp-2">
           {title}
         </h3>
-        <p className="text-sm text-gray-600 leading-relaxed transition-colors duration-300 group-hover:text-gray-700 min-h-[72px]">
+        <p className="text-xs sm:text-sm text-gray-600 leading-relaxed transition-colors duration-300 group-hover:text-gray-700 min-h-[56px] sm:min-h-[72px]">
           {description}
         </p>
 

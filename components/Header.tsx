@@ -8,7 +8,7 @@ export default function Header() {
       <Container className="flex h-14 items-center justify-between">
         <Link href="/" className="cursor-pointer transition-opacity hover:opacity-80">
           <Image
-            className=""
+            className="h-auto w-28 sm:w-[180px]"
             src="/logo/logo-full.svg"
             alt="TalkDrill logo"
             width={180}
@@ -21,7 +21,7 @@ export default function Header() {
             href="https://rzp.io/rzp/f0HDYyn"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative inline-flex items-center rounded-full bg-yellow-400 px-5 py-2 text-sm font-semibold text-black shadow transition-all duration-300 ease-in-out md:hover:bg-yellow-300 md:hover:scale-105 md:hover:shadow-lg focus:outline-none md:focus:ring-2 md:focus:ring-yellow-200 md:focus:scale-95 md:active:scale-95 cursor-pointer border-2 border-yellow-500 md:hover:border-orange-400 md:hover:shadow-[0_0_20px_rgba(251,146,60,0.6)] ring-2 ring-yellow-300/40 md:hover:ring-orange-400/60 md:animate-pulse md:hover:animate-none"
+            className="relative inline-flex items-center rounded-full bg-yellow-400 px-3 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm font-semibold text-black shadow transition-all duration-300 ease-in-out md:hover:bg-yellow-300 md:hover:scale-105 md:hover:shadow-lg focus:outline-none md:focus:ring-2 md:focus:ring-yellow-200 md:focus:scale-95 md:active:scale-95 cursor-pointer border-2 border-yellow-500 md:hover:border-orange-400 md:hover:shadow-[0_0_20px_rgba(251,146,60,0.6)] ring-2 ring-yellow-300/40 md:hover:ring-orange-400/60 md:animate-pulse md:hover:animate-none"
           >
           Register Now @{" "}<span className="ml-1 font-bold">₹21</span>
           </a>
